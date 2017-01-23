@@ -1,0 +1,19 @@
+<mtapp:setting
+  id="timestamp_basename_enabled"
+  label="<__trans phrase='Entry Basename'>"
+>
+  <label>
+    <input type="checkbox" name="enabled" value="1"<mt:if name="enabled"> checked="checked"</mt:if> />
+    <__trans phrase="Set formated timestamp as default.">
+  </label>
+  <input type="hidden" name="enabled" value="0" />
+</mtapp:setting>
+
+<mtapp:setting
+  id="timestamp_basename_format"
+  label="<__trans phrase='Format'>"
+  show_hint="1"
+  hint="<__trans phrase='Perl strftime subroutine format and %R as 3 digits random integer can be used.'>"
+>
+  <input type="text" name="format" value="<mt:var name="format" escape="html">" class="text" placeholder="<__trans phrase='example_format'>" />
+</mtapp:setting>

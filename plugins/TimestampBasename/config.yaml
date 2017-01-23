@@ -1,0 +1,20 @@
+id: TimestampBasename
+name: TimestampBasename
+description: <__trans phrase="Sets formatted timestamp to entry default basename.">
+version: 1.0.0
+l10n_class: MT::TimestampBasename::L10N
+
+settings:
+    enabled:
+        Scope: blog
+        Default: 0
+    format:
+        Scope: blog
+        Default: %Y%m%d_%H%M%S_%R
+
+blog_config_template: tmpl/blog_config_template.tmpl
+
+applications:
+    cms:
+        callbacks:
+            template_param.edit_entry: $TimestampBasename::MT::TimestampBasename::CMS::template_param_edit_entry
