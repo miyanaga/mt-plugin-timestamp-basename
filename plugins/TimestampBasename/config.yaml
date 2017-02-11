@@ -17,4 +17,6 @@ blog_config_template: tmpl/blog_config_template.tmpl
 applications:
     cms:
         callbacks:
-            template_param.edit_entry: $TimestampBasename::MT::TimestampBasename::CMS::template_param_edit_entry
+            template_param.edit_entry:
+                priority: 9
+                code: $TimestampBasename::MT::TimestampBasename::CMS::template_param_edit_entry
