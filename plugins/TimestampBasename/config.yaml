@@ -18,5 +18,5 @@ applications:
     cms:
         callbacks:
             template_param.edit_entry:
-                priority: 9
+                priority: 8
                 code: $TimestampBasename::MT::TimestampBasename::CMS::template_param_edit_entry
